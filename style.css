@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray-background: hsl(0, 0%, 95%);
+
+  --font-lexend-400: "Lexend Deca";
+  --font-big-shoulders-700: "Big Shoulders Display";
+
+  --sedan-icon: url("images/icon-sedans.svg");
+  --suvs-icon: url("images/icon-suvs.svg");
+  --luxury-icon: url("images/icon-luxury.svg");
+}
+
+body {
+  font-family: var(--font-lexend-400);
+  background-color: var(--neutral-very-light-gray-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  max-height: 80%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-family: var(--font-big-shoulders-700);
+  color: var(--neutral-very-light-gray-background);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2.8rem;
+  color: var(--neutral-transparent-white-paragraph);
+}
+
+.sedan {
+  background-color: var(--primary-bright-orange);
+}
+
+.sedan > h1::before {
+  content: var(--sedan-icon);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.suv > h1::before {
+  content: var(--suvs-icon);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.luxury > h1::before {
+  content: var(--luxury-icon);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.suv {
+  background-color: var(--primary-dark-cyan);
+}
+
+.luxury {
+  background-color: var(--primary-very-dark-cyan);
+}
+
+button {
+  background-color: var(--neutral-very-light-gray-background);
+  border-radius: 50px;
+  padding: 1rem;
+  border: none;
+  mix-blend-mode: screen;
+
+  align-self: flex-start;
+}
